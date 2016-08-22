@@ -253,10 +253,13 @@ SparkR also provides a number of functions that can directly applied to columns 
 <div data-lang="r"  markdown="1">
 {% highlight r %}
 
+# Create a new SparkDataFrame
+df0 <- df
+
 # Convert waiting time from hours to seconds.
 # Note that we can assign this to a new column in the same SparkDataFrame
-df$waiting_secs <- df$waiting * 60
-head(df)
+df0$waiting_secs <- df0$waiting * 60
+head(df0)
 ##  eruptions waiting waiting_secs
 ##1     3.600      79         4740
 ##2     1.800      54         3240
